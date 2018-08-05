@@ -356,7 +356,7 @@ export const HTML_TAGS: ITagSet = {
 };
 
 // Ionic tag information sourced from Ionic main website (https://github.com/driftyco/ionic-site)
-export const IONIC_TAGS: ITagSet = {
+export const IONIC4_TAGS: ITagSet = {
 	'ion-anchor': new HTMLTagSpecification(localize('tags.ion.anchor', 'The Anchor component is used for navigating to a specified link. Similar to the browser\'s anchor tag, it can accept a href for the location, and a direction for the transition animation.'),
 		['color:color', 'href', 'routerDirection']),
 	'ion-avatar': new HTMLTagSpecification(localize('tags.ion.avatar', 'Avatars can be used by themselves or inside of any element. If placed inside of an ion-chip or ion-item, the avatar will resize to fit the parent component.'),
@@ -603,7 +603,7 @@ export function getAngularTagProvider(): IHTMLTagProvider {
 	];
 
 	return {
-		getId: () => 'angular1',
+		getId: () => 'angularJS',
 		isApplicable: (languageId) => languageId === 'html',
 		collectTags: (collector: (tag: string, label: string) => void) => {
 			// no extra tags
@@ -629,7 +629,7 @@ export function getAngularTagProvider(): IHTMLTagProvider {
 	};
 }
 
-export function getIonicTagProvider(): IHTMLTagProvider {
+export function getIonic4TagProvider(): IHTMLTagProvider {
 	var customTags: { [tag: string]: string[] } = {
 		// a: ['nav-direction:navdir', 'nav-transition:trans'],
 		// button: ['menu-toggle:menusides']
@@ -671,11 +671,11 @@ export function getIonicTagProvider(): IHTMLTagProvider {
 	};
 
 	return {
-		getId: () => 'ionic',
+		getId: () => 'ionic4',
 		isApplicable: (languageId) => languageId === 'html',
-		collectTags: (collector: (tag: string, label: string) => void) => collectTagsDefault(collector, IONIC_TAGS),
+		collectTags: (collector: (tag: string, label: string) => void) => collectTagsDefault(collector, IONIC4_TAGS),
 		collectAttributes: (tag: string, collector: (attribute: string, type?: string) => void) => {
-			collectAttributesDefault(tag, collector, IONIC_TAGS, globalAttributes);
+			collectAttributesDefault(tag, collector, IONIC4_TAGS, globalAttributes);
 			if (tag) {
 				var attributes = customTags[tag];
 				if (attributes) {
@@ -686,7 +686,7 @@ export function getIonicTagProvider(): IHTMLTagProvider {
 				}
 			}
 		},
-		collectValues: (tag: string, attribute: string, collector: (value: string) => void) => collectValuesDefault(tag, attribute, collector, IONIC_TAGS, globalAttributes, valueSets, customTags)
+		collectValues: (tag: string, attribute: string, collector: (value: string) => void) => collectValuesDefault(tag, attribute, collector, IONIC4_TAGS, globalAttributes, valueSets, customTags)
 	};
 }
 
