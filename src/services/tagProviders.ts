@@ -4,13 +4,14 @@
  *--------------------------------------------------------------------------------------------*/
 'use strict';
 
-import {getHTML5TagProvider, getAngularTagProvider, getIonicTagProvider, getIonic4TagProvider, IHTMLTagProvider} from '../parser/htmlTags';
+import {getHTML5TagProvider, getAngularTagProvider, getIonicTagProvider, getIonic3TagProvider, getIonic4TagProvider, IHTMLTagProvider} from '../parser/htmlTags';
 import {getRazorTagProvider} from '../parser/razorTags';
 
 export let allTagProviders : IHTMLTagProvider[] = [
 	getHTML5TagProvider(),
 	getAngularTagProvider(),
 	getIonicTagProvider(),
+	getIonic3TagProvider(),
 	getIonic4TagProvider(),
 	getRazorTagProvider()
 ];

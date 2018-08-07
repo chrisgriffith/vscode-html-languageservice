@@ -424,167 +424,323 @@ export const IONIC_TAGS: ITagSet = {
 		['cache-view:b', 'can-swipe-back:b', 'hide-back-button:b', 'hide-nav-bar:b', 'view-title'])
 };
 
+export const IONIC3_TAGS: ITagSet = {
+	'ion-avatar': new HTMLTagSpecification(
+		localize('tags.ion3.avatar', 'An Avatar is a component that creates a circular image for an item. Avatars can be placed on the left or right side of an item with the item-start or item-end directive.'),
+		['item-end:v', 'item-start:v']),
+	'ion-badge': new HTMLTagSpecification(
+		localize('tags.ion3.badge', 'Badges are simple components in Ionic containing numbers or text. You can display a badge to indicate that there is new information associated with the item it is on.'),
+		['item-end:v', 'item-start:v', 'color:clrs']),
+	'ion-checkbox': new HTMLTagSpecification(
+		localize('tags.ion3.checkbox', 'Badges are simple components in Ionic containing numbers or text. You can display a badge to indicate that there is new information associated with the item it is on.'),
+		['checked:b']),
+	'ion-chip': new HTMLTagSpecification(
+		localize('tags.ion3.chip', 'Chips represent complex entities in small blocks, such as a contact.'),
+		['color:clrs']),
+	'ion-col': new HTMLTagSpecification(
+		localize('tags.ion3.col', 'Columns are cellular components of the grid system and go inside of a row. They will expand to fill their row. All content within a grid should go inside of a column.'),
+		['align-self-start:v', 'align-self-center:v', 'align-self-end:v', 'align-self-stretch:v', 'align-self-baseline:v']),
+	'ion-content': new HTMLTagSpecification(
+		localize('tags.ion3.content', 'The Content component provides an easy to use content area with some useful methods to control the scrollable area. There should only be one content in a single view component. If additional scrollable elements are need, use ionScroll.'),
+		['fullscreen:b', 'scrollDownOnLoad']),
+	'ion-datetime': new HTMLTagSpecification(
+		localize('tags.ion3.datetime', 'The DateTime component is used to present an interface which makes it easy for users to select dates and times'),
+		['displayFormat', 'pickerFormat']),
+	'ion-fab': new HTMLTagSpecification(
+		localize('tags.ion3.fab', 'FABs (Floating Action Buttons) are standard material design components. They are shaped as a circle that represents a promoted action. '),
+		['color:clrs', 'mini:v', 'top:v', 'bottom:v', 'right:v', 'left:v', 'edge:v', 'center:v', 'middle:v']),
+	'ion-fab-list': new HTMLTagSpecification(
+		localize('tags.ion3.fab-list', 'ion-fab-list is a container for multiple FAB buttons. They are components of ion-fab and allow you to specificy the buttons position, left, right, top, bottom.'),
+		['side:fabside']),
+	'ion-footer': new HTMLTagSpecification(
+		localize('tags.ion3.footer', 'Footer is a root component of a page that sits at the bottom of the page. Footer can be a wrapper for ion-toolbar to make sure the content area is sized correctly.'),
+		['no-border:v']),
+	'ion-grid': new HTMLTagSpecification(
+		localize('tags.ion3.grid', 'The grid is a powerful mobile-first flexbox system for building custom layouts. '),
+		['no-padding:v', 'fixed:v' ]),
+	'ion-header': new HTMLTagSpecification(
+		localize('tags.ion3.header', 'Header is a parent component that holds the navbar and toolbar component.'),
+		['no-border:v']),
+	'ion-icon': new HTMLTagSpecification(
+		localize('tags.ion3.icon', 'Icons can be used on their own, or inside of a number of Ionic components.'),
+		['name', 'md', 'ios', 'isActive']),
+	'ion-img': new HTMLTagSpecification(
+		localize('tags.ion3.icon', 'The ion-img component is similar to the standard img element, but it also adds features in order to provide improved performance. Features include only loading images which are visible, using web workers for HTTP requests, preventing jank while scrolling and in-memory caching.'),
+		['alt', 'bounds', 'cache:b', 'height', 'src', 'width']),
+	'ion-infinite-scroll': new HTMLTagSpecification(
+		localize('tags.ion3.infinite-scroll', 'The Infinite Scroll allows you to perform an action when the user scrolls a specified distance from the bottom or top of the page.'),
+		['enabled:b', 'position', 'threshold']),
+	'ion-infinite-scroll-content': new HTMLTagSpecification(
+		localize('tags.ion3.infinite-scroll-content', 'The Infinite Scroll allows you to perform an action when the user scrolls a specified distance from the bottom or top of the page.'),
+		['loadingSpinner', 'loadingText']),
+	'ion-input': new HTMLTagSpecification(
+		localize('tags.ion3.input', 'ion-input is meant for text type inputs only, such as text, password, email, number, search, tel, and url. An ion-input is not used for non-text type inputs, such as a checkbox, radio, toggle, range, select, etc.'),
+		['type:t', 'fixed:v', 'placeholder', 'autocomplete:inputautocomplete', 'autocorrect:inputautocomplete', 'clearInput', 'clearOnEdit', 'max', 'min', 'readonly:b', 'step']),
+	'ion-item': new HTMLTagSpecification(
+		localize('tags.ion3.item', 'An item can contain text, images, and anything else. Generally it is placed in a list with other items. It can easily be swiped, deleted, reordered, edited, and more.'),
+		['detail-push:v', 'detail-none:v', 'no-lines:v', 'text-wrap:v', 'item-start:v', 'item-end:v', 'item-content:v']),
+	'ion-item-divider': new HTMLTagSpecification(
+		localize('tags.ion3.item-divider', 'List headers and item dividers, although styled differently, are also items and can be written as <ion-list-header> and <ion-item-divider>, respectively.'),
+		['color:clrs']),
+	'ion-list-header': new HTMLTagSpecification(
+		localize('tags.ion3.list-header', 'List headers and item dividers, although styled differently, are also items and can be written as <ion-list-header> and <ion-item-divider>, respectively.'),
+		[]),
+	'ion-item-group': new HTMLTagSpecification(
+		localize('tags.ion3.item-group', 'Item reorder adds the ability to change an item\'s order in a group. It can be used within an ion-list or ion-item-group to provide a visual drag and drop interface.'),
+		['reorder:b']),
+	'ion-item-options': new HTMLTagSpecification(
+		localize('tags.ion3.item-options', 'The option buttons for an ion-item-sliding. These buttons can be placed either on the left or right side. '),
+		['side:menusides']),
+	'ion-item-sliding': new HTMLTagSpecification(
+		localize('tags.ion3.item-sliding', 'A sliding item is a list item that can be swiped to reveal buttons. It requires an Item component as a child and a List component as a parent. All buttons to reveal can be placed in the <ion-item-options> element.'),
+		['side:menusides']),
+	'ion-label': new HTMLTagSpecification(
+		localize('tags.ion3.label', 'Labels are placed inside of an ion-item element and can be used to describe an ion-input, ion-toggle, ion-checkbox, and more.'),
+		['fixed:v', 'floating:v', 'stacked:v']),	
+	'ion-list': new HTMLTagSpecification(
+		localize('tags.ion3.list', 'The List is a widely used interface element in almost any mobile app, and can include content ranging from basic text all the way to buttons, toggles, icons, and thumbnails.'),
+		['sliding:b', 'no-lines:v', 'inset:v', 'radio-group:v' ]),	
+	'ion-menu': new HTMLTagSpecification(
+		localize('tags.ion3.menu', 'The Menu component is a navigation drawer that slides in from the side of the current view.'),
+		['side:menusides', 'type:menutype' , 'content', 'enabled:b', 'id', 'persistent:b', 'swipeEnabled']),			
+	'ion-nav': new HTMLTagSpecification(
+		localize('tags.ion3.nav', 'Navigation is handled through the <ion-nav> component, which works as a simple stack that new pages are pushed onto and popped off of, corresponding to moving forward and backward in history.'),
+		['name', 'root', 'rootParams']),
+	'ion-navbar': new HTMLTagSpecification(
+		localize('tags.ion3.navbar', 'Navbar acts as the navigational toolbar, which also comes with a back button. A navbar can contain a ion-title, any number of buttons, a segment, or a searchbar. Navbars must be placed within an <ion-header> in order for them to be placed above the content.'),
+		['hideBackButton']),			
+	'ion-note': new HTMLTagSpecification(
+		localize('tags.ion3.note', 'A note is detailed item in an ion-item. It creates greyed out element that can be on the left or right side of an item.'),
+		['note:note']),	
+	'ion-option': new HTMLTagSpecification(
+		localize('tags.ion3.option', 'ion-option is a child component of ion-select. Similar to the native option element, ion-option can take a value and a selected property.'),
+		['disabled:b', 'selected:b', 'value']),	
+	'ion-radio': new HTMLTagSpecification(
+		localize('tags.ion3.radio', 'A radio button is a button that can be either checked or unchecked. A user can tap the button to check or uncheck it. '),
+		['color:clrs', 'disabled:b', 'checked:b', 'value']),	
+	'ion-range': new HTMLTagSpecification(
+		localize('tags.ion3.range', 'The Range slider lets users select from a range of values by moving the slider knob. It can accept dual knobs, but by default one knob controls the value of the range.'),
+		[ 'debounce', 'dualKnobs', 'max', 'min', 'pin:b', 'snaps:b', 'step']),	
+	'ion-refresher': new HTMLTagSpecification(
+		localize('tags.ion3.refresher', 'The Refresher provides pull-to-refresh functionality on a content component. '),
+		[]),
+	'ion-refresher-content': new HTMLTagSpecification(
+		localize('tags.ion3.refresher-content', 'By default, Ionic provides the pulling icon and refreshing spinner that looks best for the platform the user is on. '),
+		['pullingIcon', 'pullingText', 'refreshingSpinner', 'refreshingText']),
+	'ion-row': new HTMLTagSpecification(
+		localize('tags.ion3.row', 'Rows are horizontal components of the grid system and contain varying numbers of columns. They ensure the columns are positioned properly.'),
+		[]),
+	'ion-scroll': new HTMLTagSpecification(
+		localize('tags.ion3.scroll', 'Scroll is a non-flexboxed scroll area that can scroll horizontally or vertically. '),
+		['scrollX:b', 'scrollY:b']),
+	'ion-searchbar': new HTMLTagSpecification(
+		localize('tags.ion3.searchbar', 'Manages the display of a Searchbar which can be used to search or filter items.'),
+		['animated:b', 'autocomplete:inputautocomplete', 'autocorrect:inputautocomplete', 'cancelButtonText', 'debounce', 'placeholder', 'showCancelButton', 'spellcheck:b']),
+	'ion-segment': new HTMLTagSpecification(
+		localize('tags.ion3.segment', 'A Segment is a group of buttons, sometimes known as Segmented Controls, that allow the user to interact with a compact group of a number of controls '),
+		['color:clrs']),
+	'ion-segment-button': new HTMLTagSpecification(
+		localize('tags.ion3.segment-button', 'A Segment is a group of buttons, sometimes known as Segmented Controls, that allow the user to interact with a compact group of a number of controls.'),
+		['value', 'disabled:b']),
+	'ion-select': new HTMLTagSpecification(
+		localize('tags.ion3.select', 'The ion-select component is similar to an HTML <select> element.'),
+		['cancelText', 'compareWith', 'interface:slctinterface', 'multiple:b', 'okText', 'placeholder', 'selectOptions', 'selectedText']),
+	'ion-slide': new HTMLTagSpecification(
+		localize('tags.ion3.slide', 'The Slide component is a child component of Slides. '),
+		[]),
+	'ion-slides': new HTMLTagSpecification(
+		localize('tags.ion3.slides', 'The Slides component is a multi-section container. Each section can be swiped or dragged between. It contains any number of Slide components.'),
+		['autoplay', 'centeredSlides', 'control', 'dir', 'direction:menusides', 'effect:slideeffect', 'initialSlide', 'loop:b', 'pager:b', 'paginationType', 'parallax:b', 'slidesPerView', 'spaceBetween', 'speed', 'zoom:b'  ]),
+	'ion-spinner': new HTMLTagSpecification(
+		localize('tags.ion3.spinner', 'The ion-spinner component provides a variety of animated SVG spinners.'),
+		['name:spinner']),
+	'ion-split-pane': new HTMLTagSpecification(
+		localize('tags.ion3.split-pane', 'SplitPane is a component that makes it possible to create multi-view layout. Similar to iPad apps, SplitPane allows UI elements, like Menus, to be displayed as the viewport increases.  '),
+		['enabled:b', 'when']),
+	'ion-tab': new HTMLTagSpecification(
+		localize('tags.ion3.tab', 'The Tab component, written <ion-tab>, is styled based on the mode and should be used in conjunction with the Tabs component. '),
+		['enabled:b', 'root', 'rootParams', 'show:b', 'tabBadge', 'tabBadgeStyle', 'tabIcon', 'tabTitle', 'tabUrlPath', 'tabsHideOnSubPages']),
+	'ion-tabs': new HTMLTagSpecification(
+		localize('tags.ion3.tabs', 'Tabs make it easy to navigate between different pages or functional aspects of an app. The Tabs component, written as <ion-tabs>, is a container of individual Tab components.'),
+		['name', 'selectedIndex', ' tabsHilight', 'tabsLayout', ' tabsPlacement']),
+	'ion-thumbnail': new HTMLTagSpecification(
+		localize('tags.ion3.thumbnail', 'A Thumbnail is a component that creates a squared image for an item. Thumbnails can be place on the left or right side of an item with the item-start or item-end directive.'),
+		['item-end:v', 'item-start:v']),
+	'ion-title': new HTMLTagSpecification(
+		localize('tags.ion3.title', 'ion-title is a component that sets the title of the Toolbar or Navbar.'),
+		[]),
+	'ion-toggle': new HTMLTagSpecification(
+		localize('tags.ion3.toggle', 'A toggle technically is the same thing as an HTML checkbox input, except it looks different and is easier to use on a touch device. '),
+		['checked:b', 'disabled:b', 'value']),
+	'ion-toolbar': new HTMLTagSpecification(
+		localize('tags.ion3.toolbar', 'A Toolbar is a generic bar that is positioned above or below content. Unlike a Navbar, a toolbar can be used as a subheader. '),
+		[]),			
+	'ion-textarea': new HTMLTagSpecification(
+		localize('tags.ion3.textarea', '<ion-textarea> should be used in place of <textarea>.'),
+		['type:t', 'fixed:v', 'placeholder', 'autocomplete:inputautocomplete', 'autocorrect:inputautocomplete', 'clearInput', 'clearOnEdit', 'max', 'min', 'readonly:b', 'step']),
+};
+
 // Ionic tag information sourced from Ionic main website (https://github.com/driftyco/ionic-site)
 export const IONIC4_TAGS: ITagSet = {
-	'ion-anchor': new HTMLTagSpecification(localize('tags.ion.anchor', 'The Anchor component is used for navigating to a specified link. Similar to the browser\'s anchor tag, it can accept a href for the location, and a direction for the transition animation.'),
+	'ion-anchor': new HTMLTagSpecification(localize('tags.ion4.anchor', 'The Anchor component is used for navigating to a specified link. Similar to the browser\'s anchor tag, it can accept a href for the location, and a direction for the transition animation.'),
 		['color:color', 'href', 'routerDirection']),
-	'ion-avatar': new HTMLTagSpecification(localize('tags.ion.avatar', 'Avatars can be used by themselves or inside of any element. If placed inside of an ion-chip or ion-item, the avatar will resize to fit the parent component.'),
+	'ion-avatar': new HTMLTagSpecification(localize('tags.ion4.avatar', 'Avatars can be used by themselves or inside of any element. If placed inside of an ion-chip or ion-item, the avatar will resize to fit the parent component.'),
 		['slot:slot']),
-	'ion-back-button': new HTMLTagSpecification(localize('tags.ion.back-button', 'The back button navigates back in the app\'s history upon click.'),
+	'ion-back-button': new HTMLTagSpecification(localize('tags.ion4.back-button', 'The back button navigates back in the app\'s history upon click.'),
 		['color:color', 'defaultHref', 'icon', 'mode:mode','text']),
-	'ion-backdrop': new HTMLTagSpecification(localize('tags.ion.backdrop', 'Backdrops are full screen components that overlay other components.'),
+	'ion-backdrop': new HTMLTagSpecification(localize('tags.ion4.backdrop', 'Backdrops are full screen components that overlay other components.'),
 		['stopPropagation', 'tappable:b', 'visible:b']),
-	'ion-badge': new HTMLTagSpecification(localize('tags.ion.badge', 'Badges are inline block elements that usually appear near another element. Typically they contain a number or other characters.'),
+	'ion-badge': new HTMLTagSpecification(localize('tags.ion4.badge', 'Badges are inline block elements that usually appear near another element. Typically they contain a number or other characters.'),
 		['color:color', 'mode:mode']),
-	'ion-button': new HTMLTagSpecification(localize('tags.ion.button', 'Buttons provide a clickable element, which can be used in forms, or anywhere that needs simple, standard button functionality.'),
+	'ion-button': new HTMLTagSpecification(localize('tags.ion4.button', 'Buttons provide a clickable element, which can be used in forms, or anywhere that needs simple, standard button functionality.'),
 		['buttonType:btype','color:color', 'mode:mode', 'disabled:b', 'expand:expand', 'fill:fill', 'href', 'mode:mode', 'routerDirection', 'shape', 'size:size', 'strong:b', 'type:btntype' ]),
-	'ion-buttons': new HTMLTagSpecification(localize('tags.ion.buttons', 'The Buttons component is a container element. Buttons placed in a toolbar should be placed inside of the <ion-buttons> element.'),
+	'ion-buttons': new HTMLTagSpecification(localize('tags.ion4.buttons', 'The Buttons component is a container element. Buttons placed in a toolbar should be placed inside of the <ion-buttons> element.'),
 		['slot:slot' ]),
-	'ion-card': new HTMLTagSpecification(localize('tags.ion.card', 'Cards are a standard piece of UI that serves as an entry point to more detailed information. A card can be a single component, but is often made up of some header, title, subtitle, and content. ion-card is broken up into several sub-components to reflect this. Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.'),
+	'ion-card': new HTMLTagSpecification(localize('tags.ion4.card', 'Cards are a standard piece of UI that serves as an entry point to more detailed information. A card can be a single component, but is often made up of some header, title, subtitle, and content. ion-card is broken up into several sub-components to reflect this. Please see ion-card-content, ion-card-header, ion-card-title, ion-card-subtitle.'),
 		['color:color', 'mode:mode' ]),
-	'ion-card-content': new HTMLTagSpecification(localize('tags.ion.card-content', 'ion-card-content is child component of ion-card that adds some content padding. It is recommended that any text content for a card should be placed in an ion-card-content.'),
+	'ion-card-content': new HTMLTagSpecification(localize('tags.ion4.card-content', 'ion-card-content is child component of ion-card that adds some content padding. It is recommended that any text content for a card should be placed in an ion-card-content.'),
 		['mode:mode' ]),
-	'ion-card-header': new HTMLTagSpecification(localize('tags.ion.card-header', 'ion-card-header is a header component for ion-card.'),
+	'ion-card-header': new HTMLTagSpecification(localize('tags.ion4.card-header', 'ion-card-header is a header component for ion-card.'),
 		['color:color', 'mode:mode', 'translucent:b' ]),
-	'ion-card-subtitle': new HTMLTagSpecification(localize('tags.ion.card-subtitle', 'ion-card-subtitle is a child component of ion-card'),
+	'ion-card-subtitle': new HTMLTagSpecification(localize('tags.ion4.card-subtitle', 'ion-card-subtitle is a child component of ion-card'),
 		['color:color', 'mode:mode']),
-	'ion-card-title': new HTMLTagSpecification(localize('tags.ion.card-title', 'ion-card-title is a child component of ion-card'),
+	'ion-card-title': new HTMLTagSpecification(localize('tags.ion4.card-title', 'ion-card-title is a child component of ion-card'),
 		['color:color', 'mode:mode']),
-	'ion-checkbox': new HTMLTagSpecification(localize('tags.ion.checkbox', 'Checkboxes allow the selection of multiple options from a set of options. They appear as checked (ticked) when activated.'),
+	'ion-checkbox': new HTMLTagSpecification(localize('tags.ion4.checkbox', 'Checkboxes allow the selection of multiple options from a set of options. They appear as checked (ticked) when activated.'),
 		['checked:b', 'color:color', 'disabled:b', 'mode:mode', 'name', 'value']),
-	'ion-chip': new HTMLTagSpecification(localize('tags.ion.chip', 'Chips represent complex entities in small blocks, such as a contact. A chip can contain several different elements such as avatars, text, buttons, and icons.'),
+	'ion-chip': new HTMLTagSpecification(localize('tags.ion4.chip', 'Chips represent complex entities in small blocks, such as a contact. A chip can contain several different elements such as avatars, text, buttons, and icons.'),
 		['color:color', 'mode:mode']),
-	'ion-chip-button': new HTMLTagSpecification(localize('tags.ion.chip-button', 'A ChipButton is an inset button that is placed inside of a Chip.'),
+	'ion-chip-button': new HTMLTagSpecification(localize('tags.ion4.chip-button', 'A ChipButton is an inset button that is placed inside of a Chip.'),
 		['color:color', 'disabled:b', 'fill:fill', 'mode:mode', 'href']),
-	'ion-chip-icon': new HTMLTagSpecification(localize('tags.ion.chip-icon', 'A ChipIcon is an icon that is placed inside of a Chip.'),
+	'ion-chip-icon': new HTMLTagSpecification(localize('tags.ion4.chip-icon', 'A ChipIcon is an icon that is placed inside of a Chip.'),
 		['color:color', 'mode:mode', 'name']),
-	'ion-col': new HTMLTagSpecification(localize('tags.ion.col', 'Columns are cellular components of the grid system and go inside of a row. They will expand to fill their row. All content within a grid should go inside of a column.'),
+	'ion-col': new HTMLTagSpecification(localize('tags.ion4.col', 'Columns are cellular components of the grid system and go inside of a row. They will expand to fill their row. All content within a grid should go inside of a column.'),
 		['offset', 'offsetLg', 'offsetMd', 'offsetSm', 'offsetXl', 'offsetXs', 'pull', 'pullLg', 'pullMd', 'pullSm', 'pullXl', 'pullXs', 'push', 'pushLg', 'pushMd', 'pushSm', 'pushXl', 'pushXs', 'size', 'sizeLg', 'sizeMd', 'sizeSm', 'sizeXl', 'sizeXs']),
-	'ion-content': new HTMLTagSpecification(localize('tags.ion.content', 'Content component provides an easy to use content area with some useful methods to control the scrollable area. There should only be one content in a single view component.'),
+	'ion-content': new HTMLTagSpecification(localize('tags.ion4.content', 'Content component provides an easy to use content area with some useful methods to control the scrollable area. There should only be one content in a single view component.'),
 		['color:color', 'fullscreen:b', 'scrollEnabled:b', 'scrollEvents:b']),
-	'ion-datetime': new HTMLTagSpecification(localize('tags.ion.datetime', 'Datetimes present a picker interface from the bottom of a page, making it easy for users to select dates and times. The picker displays scrollable columns that can be used to individually select years, months, days, hours and minute values.'),
+	'ion-datetime': new HTMLTagSpecification(localize('tags.ion4.datetime', 'Datetimes present a picker interface from the bottom of a page, making it easy for users to select dates and times. The picker displays scrollable columns that can be used to individually select years, months, days, hours and minute values.'),
 		['cancelText', 'dayNames', 'dayShortNames', 'dayValues', 'disabled:b', 'displayFormat', 'doneText', 'hourValues', 'max', 'min', 'minuteValues', 'monthNames', 'monthShortNames', 'monthValues', 'pickerFormat', 'pickerOptions', 'placeholder', 'value', 'yearValues']),
-	'ion-fab': new HTMLTagSpecification(localize('tags.ion.fab', 'Fabs are container elements that contain one or more fab buttons. They should be placed in a fixed position that does not scroll with the content.'),
+	'ion-fab': new HTMLTagSpecification(localize('tags.ion4.fab', 'Fabs are container elements that contain one or more fab buttons. They should be placed in a fixed position that does not scroll with the content.'),
 		['activated:b', 'edge:b', 'horizontal:ionhorizontal', 'vertical:ionvertical']),
-	'ion-fab-button': new HTMLTagSpecification(localize('tags.ion.fab-button', 'Floating Action Buttons (FABs) represent the primary action in an application. By default, they have a circular shape.'),
+	'ion-fab-button': new HTMLTagSpecification(localize('tags.ion4.fab-button', 'Floating Action Buttons (FABs) represent the primary action in an application. By default, they have a circular shape.'),
 		['activated:b','color:color', 'disabled:b', 'href','mode:mode', 'show:b', 'translucent:b']),
-	'ion-fab-list': new HTMLTagSpecification(localize('tags.ion.fab-list', 'The ion-fab-list element is a container for multiple fab buttons. This collection of fab buttons contains actions related to the main fab button and is flung out on click.'),
+	'ion-fab-list': new HTMLTagSpecification(localize('tags.ion4.fab-list', 'The ion-fab-list element is a container for multiple fab buttons. This collection of fab buttons contains actions related to the main fab button and is flung out on click.'),
 		['activated:b', 'side']),
-	'ion-footer': new HTMLTagSpecification(localize('tags.ion.footer', 'Footer is a root component of a page that sits at the bottom of the page. Footer can be a wrapper for ion-toolbar to make sure the content area is sized correctly.'),
+	'ion-footer': new HTMLTagSpecification(localize('tags.ion4.footer', 'Footer is a root component of a page that sits at the bottom of the page. Footer can be a wrapper for ion-toolbar to make sure the content area is sized correctly.'),
 		['mode:mode', 'translucent:b']),
-	'ion-grid': new HTMLTagSpecification(localize('tags.ion.grid', 'Grids are composed of three units — a grid, row(s) and column(s)). Columns will expand to fill the row, and will resize to fit additional columns. It is based on a 12 column layout with different breakpoints based on the screen size.'),
+	'ion-grid': new HTMLTagSpecification(localize('tags.ion4.grid', 'Grids are composed of three units — a grid, row(s) and column(s)). Columns will expand to fill the row, and will resize to fit additional columns. It is based on a 12 column layout with different breakpoints based on the screen size.'),
 		['fixed:b']),
-	'ion-header': new HTMLTagSpecification(localize('tags.ion.header', 'Header is a parent component that holds the toolbar component. It\'s important to note that ion-header needs to be the one of the three root elements of a page.'),
+	'ion-header': new HTMLTagSpecification(localize('tags.ion4.header', 'Header is a parent component that holds the toolbar component. It\'s important to note that ion-header needs to be the one of the three root elements of a page.'),
 		['mode:mode', 'translucent:b']),
-	'ion-hide-when': new HTMLTagSpecification(localize('tags.ion.hide-when', 'HideWhen is a component that will automatically hide itself and any child content when a property evaluates to true.'),
+	'ion-hide-when': new HTMLTagSpecification(localize('tags.ion4.hide-when', 'HideWhen is a component that will automatically hide itself and any child content when a property evaluates to true.'),
 		['mediaQuery', 'mode:mode', 'or:b', 'orientation', 'platform', 'size']),
-	'ion-img': new HTMLTagSpecification(localize('tags.ion.img', 'Img is a tag that will lazyily load an image when ever the tag is in the viewport.'),
+	'ion-img': new HTMLTagSpecification(localize('tags.ion4.img', 'Img is a tag that will lazyily load an image when ever the tag is in the viewport.'),
 		['alt', 'src']),
-	'ion-infinite-scroll': new HTMLTagSpecification(localize('tags.ion.infinite-scroll', 'The Infinite Scroll component calls an action to be performed when the user scrolls a specified distance from the bottom or top of the page.'),
+	'ion-infinite-scroll': new HTMLTagSpecification(localize('tags.ion4.infinite-scroll', 'The Infinite Scroll component calls an action to be performed when the user scrolls a specified distance from the bottom or top of the page.'),
 		['disabled:b', 'position:position', 'threshold']),
-	'ion-infinite-scroll-content': new HTMLTagSpecification(localize('tags.ion.infinite-scroll-content', 'The ion-infinite-scroll-content component is the default child used by the ion-infinite-scroll. It displays an infinite scroll spinner that looks best based on the platform and changes the look depending on the infinite scroll\'s state.'),
-		['loadingSpinner', 'loadingText']),
-	'ion-input': new HTMLTagSpecification(localize('tags.ion.input', 'The input component is a wrapper to the HTML input element with custom styling and additional functionality. It accepts most of the same properties as the HTML input, but works great on desktop devices and integrates with the keyboard on mobile devices.'),
+	'ion-infinite-scroll-content': new HTMLTagSpecification(localize('tags.ion4.infinite-scroll-content', 'The ion-infinite-scroll-content component is the default child used by the ion-infinite-scroll. It displays an infinite scroll spinner that looks best based on the platform and changes the look depending on the infinite scroll\'s state.'),
+		['loadingSpinner:spinner', 'loadingText']),
+	'ion-input': new HTMLTagSpecification(localize('tags.ion4.input', 'The input component is a wrapper to the HTML input element with custom styling and additional functionality. It accepts most of the same properties as the HTML input, but works great on desktop devices and integrates with the keyboard on mobile devices.'),
 		['accept', 'autocapitalize', 'autocomplete:inputautocomplete', 'autocorrect', 'clearInput', 'clearOnEdit', 'color:color', 'inputmode:im', 'debounce', 'max', 'maxlength', 'min', 'minlength', 'mode:mode', 'multiple:b', 'name', 'pattern', 'placeholder', 'readonly:b', 'results', 'size', 'spellcheck', 'step', 'type:t', 'value']),
-	'ion-item': new HTMLTagSpecification(localize('tags.ion.item', 'Items are elements that can contain text, icons, avatars, images, inputs, and any other native or custom elements.'),
+	'ion-item': new HTMLTagSpecification(localize('tags.ion4.item', 'Items are elements that can contain text, icons, avatars, images, inputs, and any other native or custom elements.'),
 		['button:b', 'color:color', 'detail:b', 'detailIcon', 'href', 'lines', 'mode:mode', 'routerDirection', 'state', 'type:btntype']),
-	'ion-item-divider': new HTMLTagSpecification(localize('tags.ion.item-divider', 'Item Dividers are block elements that can be used to separate items in a list. They are similar to list headers, but instead of being placed at the top of a list, they should go in between groups of like items.'),
+	'ion-item-divider': new HTMLTagSpecification(localize('tags.ion4.item-divider', 'Item Dividers are block elements that can be used to separate items in a list. They are similar to list headers, but instead of being placed at the top of a list, they should go in between groups of like items.'),
 		['color:color', 'mode:mode']),
-	'ion-item-group': new HTMLTagSpecification(localize('tags.ion.item-group', 'Item groups are containers that organize similar items together. They can contain item dividers to divide the items into multiple sections.'),
+	'ion-item-group': new HTMLTagSpecification(localize('tags.ion4.item-group', 'Item groups are containers that organize similar items together. They can contain item dividers to divide the items into multiple sections.'),
 		[]),
-	'ion-item-option': new HTMLTagSpecification(localize('tags.ion.item-option', 'The option button for an ion-item-sliding. Must be placed inside of an <ion-item-options>. You can combine the ionSwipe event and the expandable directive to create a full swipe action for the item.'),
+	'ion-item-option': new HTMLTagSpecification(localize('tags.ion4.item-option', 'The option button for an ion-item-sliding. Must be placed inside of an <ion-item-options>. You can combine the ionSwipe event and the expandable directive to create a full swipe action for the item.'),
 		['color:color', 'disabled:b', 'expandable:b', 'href', 'mode:mode']),
-	'ion-item-options': new HTMLTagSpecification(localize('tags.ion.item-options', 'The option buttons for an ion-item-sliding. These buttons can be placed either on the start or end side.'),
+	'ion-item-options': new HTMLTagSpecification(localize('tags.ion4.item-options', 'The option buttons for an ion-item-sliding. These buttons can be placed either on the start or end side.'),
 		['side:menusides']),
-	'ion-item-sliding': new HTMLTagSpecification(localize('tags.ion.item-sliding', 'A sliding item contains an item that can be dragged to reveal buttons. It requires an item component as a child. All options to reveal should be placed in the item options element.'),
+	'ion-item-sliding': new HTMLTagSpecification(localize('tags.ion4.item-sliding', 'A sliding item contains an item that can be dragged to reveal buttons. It requires an item component as a child. All options to reveal should be placed in the item options element.'),
 		[]),
-	'ion-label': new HTMLTagSpecification(localize('tags.ion.label', 'Label is a wrapper element that can be used in combination with ion-item, ion-input, ion-toggle, and more. The position of the label inside of an item can be inline, fixed, stacked, or floating.'),
+	'ion-label': new HTMLTagSpecification(localize('tags.ion4.label', 'Label is a wrapper element that can be used in combination with ion-item, ion-input, ion-toggle, and more. The position of the label inside of an item can be inline, fixed, stacked, or floating.'),
 		['color:color', 'mode:mode', 'position:labelposition']),
-	'ion-list': new HTMLTagSpecification(localize('tags.ion.list', 'Lists are made up of multiple rows of items which can contain text, buttons, toggles, icons, thumbnails, and much more. Lists generally contain items with similar data content, such as images and text.'),
+	'ion-list': new HTMLTagSpecification(localize('tags.ion4.list', 'Lists are made up of multiple rows of items which can contain text, buttons, toggles, icons, thumbnails, and much more. Lists generally contain items with similar data content, such as images and text.'),
 		['inset:b', 'lines']),
-	'ion-list-header': new HTMLTagSpecification(localize('tags.ion.list-header', 'ListHeader a header component for a list. Unlike ItemDivider, ListHeaders are styled to be stand-out from the rest of the list items.'),
+	'ion-list-header': new HTMLTagSpecification(localize('tags.ion4.list-header', 'ListHeader a header component for a list. Unlike ItemDivider, ListHeaders are styled to be stand-out from the rest of the list items.'),
 		['color:color', 'mode:mode']),
-	'ion-menu': new HTMLTagSpecification(localize('tags.ion.menu', 'The Menu component is a navigation drawer that slides in from the side of the current view.'),
+	'ion-menu': new HTMLTagSpecification(localize('tags.ion4.menu', 'The Menu component is a navigation drawer that slides in from the side of the current view.'),
 		['contentId', 'disabled:b', 'maxEdgeStart', 'menuId', 'side', 'swipeEnabled:b', 'type:menutype' ]),
-	'ion-menu-button': new HTMLTagSpecification(localize('tags.ion.menu-button', 'Menu Button is component that automatically creates the icon and functionality to open a menu on a page.'),
+	'ion-menu-button': new HTMLTagSpecification(localize('tags.ion4.menu-button', 'Menu Button is component that automatically creates the icon and functionality to open a menu on a page.'),
 		['autoHide:b', 'menu:menusides' ]),
-	'ion-nav': new HTMLTagSpecification(localize('tags.ion.nav', 'Nav is a standalone component for loading arbitrary components and pushing to new components on to the stack. Unlike RouterOutlet, Nav is not tied to a particular router.'),
+	'ion-nav': new HTMLTagSpecification(localize('tags.ion4.nav', 'Nav is a standalone component for loading arbitrary components and pushing to new components on to the stack. Unlike RouterOutlet, Nav is not tied to a particular router.'),
 		['animated:b', 'delegate', 'root', 'rootParams', 'swipeBackEnabled:b' ]),
-	'ion-nav-pop': new HTMLTagSpecification(localize('tags.ion.nav-pop', 'NavPop is a component used the automatically go back in navigation. It is the element from of NavController.pop().'),
+	'ion-nav-pop': new HTMLTagSpecification(localize('tags.ion4.nav-pop', 'NavPop is a component used the automatically go back in navigation. It is the element from of NavController.pop().'),
 		[]),
-	'ion-nav-push': new HTMLTagSpecification(localize('tags.ion.nav-push', 'NavPush is a component used to navigate to the specified component. It is the element from of NavController.push().'),
+	'ion-nav-push': new HTMLTagSpecification(localize('tags.ion4.nav-push', 'NavPush is a component used to navigate to the specified component. It is the element from of NavController.push().'),
 		['component', 'componentProps']),
-	'ion-nav-set-root': new HTMLTagSpecification(localize('tags.ion.nav-set-root', 'NavSetRoot is an element that allows you to set the root of the current navigation stack. It is the element form a calling NavController.setRoot().'),
+	'ion-nav-set-root': new HTMLTagSpecification(localize('tags.ion4.nav-set-root', 'NavSetRoot is an element that allows you to set the root of the current navigation stack. It is the element form a calling NavController.setRoot().'),
 		['component', 'componentProps']),
-	'ion-note': new HTMLTagSpecification(localize('tags.ion.note', 'Notes are text elements generally used as subtitles that provide more information.'),
+	'ion-note': new HTMLTagSpecification(localize('tags.ion4.note', 'Notes are text elements generally used as subtitles that provide more information.'),
 		['color:color', 'mode:mode']),
-	'ion-radio': new HTMLTagSpecification(localize('tags.ion.radio', 'Radios are generally used as a set of related options inside of a group, but they can also be used alone. Pressing on a radio will check it. They can also be checked programmatically by setting the checked property.'),
+	'ion-radio': new HTMLTagSpecification(localize('tags.ion4.radio', 'Radios are generally used as a set of related options inside of a group, but they can also be used alone. Pressing on a radio will check it. They can also be checked programmatically by setting the checked property.'),
 		['checked:b', 'color:color', 'disabled:b', 'mode:mode', 'name', 'value']),
-	'ion-radio-group': new HTMLTagSpecification(localize('tags.ion.radio-group', 'A radio group is a group of radio buttons. It allows a user to select at most one radio button from a set. Checking one radio button that belongs to a radio group unchecks any previous checked radio button within the same group.'),
+	'ion-radio-group': new HTMLTagSpecification(localize('tags.ion4.radio-group', 'A radio group is a group of radio buttons. It allows a user to select at most one radio button from a set. Checking one radio button that belongs to a radio group unchecks any previous checked radio button within the same group.'),
 		['allowEmptySelection:b', 'disabled:b', 'mode:mode', 'name', 'value']),
-	'ion-range': new HTMLTagSpecification(localize('tags.ion.range', 'The Range slider lets users select from a range of values by moving the slider knob. It can accept dual knobs, but by default one knob controls the value of the range.'),
+	'ion-range': new HTMLTagSpecification(localize('tags.ion4.range', 'The Range slider lets users select from a range of values by moving the slider knob. It can accept dual knobs, but by default one knob controls the value of the range.'),
 		['color:color', 'debounce', 'disabled:b', 'dualKnobs:b', 'max', 'min', 'mode:mode', 'name', 'pin:b', 'snaps:b', 'step', 'value']),
-	'ion-range-knob': new HTMLTagSpecification(localize('tags.ion.range-knob', 'RangeKnob is an internal component of Range.'),
+	'ion-range-knob': new HTMLTagSpecification(localize('tags.ion4.range-knob', 'RangeKnob is an internal component of Range.'),
 		['disabled:b', 'knob', 'labelId', 'max', 'min', 'pin', 'pressed:b', 'ratio', 'value']),
-	'ion-refresher': new HTMLTagSpecification(localize('tags.ion.refresher', 'The refresher provides pull-to-refresh functionality on a content component. The pull-to-refresh pattern lets a user pull down on a list of data using touch in order to retrieve more data.'),
+	'ion-refresher': new HTMLTagSpecification(localize('tags.ion4.refresher', 'The refresher provides pull-to-refresh functionality on a content component. The pull-to-refresh pattern lets a user pull down on a list of data using touch in order to retrieve more data.'),
 		['closeDuration', 'disabled:b', 'pullMax', 'pullMin', 'snapbackDuration']),
-	'ion-refresher-content': new HTMLTagSpecification(localize('tags.ion.refresher-content', 'The refresher content contains the text, icon and spinner to display during a pull-to-refresh.'),
+	'ion-refresher-content': new HTMLTagSpecification(localize('tags.ion4.refresher-content', 'The refresher content contains the text, icon and spinner to display during a pull-to-refresh.'),
 		['pullingIcon', 'pullingText', 'refreshingSpinner', 'refreshingText']),
-	'ion-reorder': new HTMLTagSpecification(localize('tags.ion.reorder', 'Notes are text elements generally used as subtitles that provide more information.'),
+	'ion-reorder': new HTMLTagSpecification(localize('tags.ion4.reorder', 'Notes are text elements generally used as subtitles that provide more information.'),
 		['slot:slot']),
-	'ion-reorder-group': new HTMLTagSpecification(localize('tags.ion.reorder-group', 'The reorder group is a wrapper component for items with the ion-reorder component.'),
+	'ion-reorder-group': new HTMLTagSpecification(localize('tags.ion4.reorder-group', 'The reorder group is a wrapper component for items with the ion-reorder component.'),
 		['disabled:b']),
-	'ion-ripple-effect': new HTMLTagSpecification(localize('tags.ion.ripple-effect', 'The ripple effect component adds the Material Design ink ripple interaction effect. This component can be used without a button and can be added to any component.'),
+	'ion-ripple-effect': new HTMLTagSpecification(localize('tags.ion4.ripple-effect', 'The ripple effect component adds the Material Design ink ripple interaction effect. This component can be used without a button and can be added to any component.'),
 		['parent', 'tapClick:b']),
-	'ion-route': new HTMLTagSpecification(localize('tags.ion.route', 'Router is a component that can take a component, and render it when the Browser URl matches the url prop. Note: this is only meant for vanilla JavaScript project. For Angular projects, use ion-router-outlet and the Angular router.'),
+	'ion-route': new HTMLTagSpecification(localize('tags.ion4.route', 'Router is a component that can take a component, and render it when the Browser URl matches the url prop. Note: this is only meant for vanilla JavaScript project. For Angular projects, use ion-router-outlet and the Angular router.'),
 		['component', 'componentProps', 'url']),
-	'ion-route-redirect': new HTMLTagSpecification(localize('tags.ion.route-redirect', 'A redirect router can only be used in the scope of ion-router as a direct children of it. Note: this is only meant for vanilla JavaScript project. For Angular projects, use ion-router-outlet and the Angular router.'),
+	'ion-route-redirect': new HTMLTagSpecification(localize('tags.ion4.route-redirect', 'A redirect router can only be used in the scope of ion-router as a direct children of it. Note: this is only meant for vanilla JavaScript project. For Angular projects, use ion-router-outlet and the Angular router.'),
 		['from', 'to']),
-	'ion-router': new HTMLTagSpecification(localize('tags.ion.router', 'Router is a component for handling routing inside vanilla JavaScript projects. For Angular projects, use ion-router-outlet and the Angular router.'),
+	'ion-router': new HTMLTagSpecification(localize('tags.ion4.router', 'Router is a component for handling routing inside vanilla JavaScript projects. For Angular projects, use ion-router-outlet and the Angular router.'),
 		['root', 'useHash:b']),
-	'ion-router-outlet': new HTMLTagSpecification(localize('tags.ion.router-outlet', 'RouterOutlet is a component used in routing within an Angular app. RouterOutlet behaves the same way as Angular\'s built-in RouterOutlet component, but contains the logic needed for animating views in and out.'),
+	'ion-router-outlet': new HTMLTagSpecification(localize('tags.ion4.router-outlet', 'RouterOutlet is a component used in routing within an Angular app. RouterOutlet behaves the same way as Angular\'s built-in RouterOutlet component, but contains the logic needed for animating views in and out.'),
 		['animated:b', 'animationBuilder', 'delegate']),
-	'ion-row': new HTMLTagSpecification(localize('tags.ion.row', 'Rows are horizontal components of the grid system and contain varying numbers of columns. They ensure the columns are positioned properly.'),
+	'ion-row': new HTMLTagSpecification(localize('tags.ion4.row', 'Rows are horizontal components of the grid system and contain varying numbers of columns. They ensure the columns are positioned properly.'),
 		[]),
-	'ion-searchbar': new HTMLTagSpecification(localize('tags.ion.searchbar', 'Searchbars represent a text field that can be used to search through a collection. They can be displayed inside of a toolbar or the main content.'),
+	'ion-searchbar': new HTMLTagSpecification(localize('tags.ion4.searchbar', 'Searchbars represent a text field that can be used to search through a collection. They can be displayed inside of a toolbar or the main content.'),
 		['animated:b', 'autocomplete', 'autocomplete:inputautocomplete', 'cancelButtonIcon', 'cancelButtonText', 'clearIcon', 'color:color', 'debounce', 'mode:mode', 'placeholder', 'searchIcon', 'showCancelButton:b', 'spellcheck:b', 'type:t', 'value']),
-	'ion-segment': new HTMLTagSpecification(localize('tags.ion.segment', 'Segments display a group of related buttons, sometimes known as segmented controls, in a horizontal row. They can be displayed inside of a toolbar or the main content.'),
+	'ion-segment': new HTMLTagSpecification(localize('tags.ion4.segment', 'Segments display a group of related buttons, sometimes known as segmented controls, in a horizontal row. They can be displayed inside of a toolbar or the main content.'),
 		['color:color', 'disabled:b', 'mode:mode', 'value']),	
-	'ion-segment-button': new HTMLTagSpecification(localize('tags.ion.segment-button', 'Segment buttons are groups of related buttons inside of a Segment. They are displayed in a horizontal row.'),
+	'ion-segment-button': new HTMLTagSpecification(localize('tags.ion4.segment-button', 'Segment buttons are groups of related buttons inside of a Segment. They are displayed in a horizontal row.'),
 		['checked:b', 'color:color', 'disabled:b', 'mode:mode', 'value']),	
-	'ion-select': new HTMLTagSpecification(localize('tags.ion.select', 'Selects are form controls to select an option, or options, from a set of options, similar to a native <select> element. When a user taps the select, a dialog appears with all of the options in a large, easy to select list.'),
+	'ion-select': new HTMLTagSpecification(localize('tags.ion4.select', 'Selects are form controls to select an option, or options, from a set of options, similar to a native <select> element. When a user taps the select, a dialog appears with all of the options in a large, easy to select list.'),
 		['cancelText', 'disabled:b', 'interface:interface', 'interfaceOptions', 'multiple:b', 'name', 'okText', 'placeholder', 'selectedText', 'value']),
-	'ion-select-option': new HTMLTagSpecification(localize('tags.ion.select-option', 'SelectOption is a component that is a child element of Select.'),
+	'ion-select-option': new HTMLTagSpecification(localize('tags.ion4.select-option', 'SelectOption is a component that is a child element of Select.'),
 		['disabled:b', 'selected:b', 'value']),
-	'ion-show-when': new HTMLTagSpecification(localize('tags.ion.show-when', 'ShowWhen is a component that will automatically show it\'s child contents when a query evaluates to true.'),
+	'ion-show-when': new HTMLTagSpecification(localize('tags.ion4.show-when', 'ShowWhen is a component that will automatically show it\'s child contents when a query evaluates to true.'),
 		['mediaQuery', 'mode:mode', 'or:b', 'orientation', 'platform', 'size']),
-	'ion-skeleton-text': new HTMLTagSpecification(localize('tags.ion.skeleton-text', 'Skeleton Text is a component for rendering placeholder content. The element will render a gray block at the specified width.'),
+	'ion-skeleton-text': new HTMLTagSpecification(localize('tags.ion4.skeleton-text', 'Skeleton Text is a component for rendering placeholder content. The element will render a gray block at the specified width.'),
 		['width']),
-	'ion-slide': new HTMLTagSpecification(localize('tags.ion.slide', 'The Slide component is a child component of Slides.'),
+	'ion-slide': new HTMLTagSpecification(localize('tags.ion4.slide', 'The Slide component is a child component of Slides.'),
 		['width']),
-	'ion-slides': new HTMLTagSpecification(localize('tags.ion.slides', 'The Slides component is a multi-section container. Each section can be swiped or dragged between. It contains any number of Slide components.'),
+	'ion-slides': new HTMLTagSpecification(localize('tags.ion4.slides', 'The Slides component is a multi-section container. Each section can be swiped or dragged between. It contains any number of Slide components.'),
 		['options', 'pager:b', 'scrollbar:b']),
-	'ion-spinner': new HTMLTagSpecification(localize('tags.ion.spinner', 'The Spinner component provides a variety of animated SVG spinners. '),
+	'ion-spinner': new HTMLTagSpecification(localize('tags.ion4.spinner', 'The Spinner component provides a variety of animated SVG spinners. '),
 		['color:color', 'duration', 'mode:mode', 'name:spinners', 'paused:b']),
-	'ion-split-pane': new HTMLTagSpecification(localize('tags.ion.split-pane', 'SplitPane is a component that makes it possible to create multi-view layout. Similar to iPad apps, SplitPane allows UI elements, like Menus, to be displayed as the viewport increases.'),
+	'ion-split-pane': new HTMLTagSpecification(localize('tags.ion4.split-pane', 'SplitPane is a component that makes it possible to create multi-view layout. Similar to iPad apps, SplitPane allows UI elements, like Menus, to be displayed as the viewport increases.'),
 		['disabled:b', 'when']),
-	'ion-tab': new HTMLTagSpecification(localize('tags.ion.tab', 'The Tab component is a child component of the Tabs component. Each Tab is meant to be a top level navigation stack for an app. Meaning that an app can have many tabs, all wit their own independent navigation.'),
+	'ion-tab': new HTMLTagSpecification(localize('tags.ion4.tab', 'The Tab component is a child component of the Tabs component. Each Tab is meant to be a top level navigation stack for an app. Meaning that an app can have many tabs, all wit their own independent navigation.'),
 		['active:b', 'badge', 'badgeColor:color', 'component', 'disabled:b', 'href', 'icon', 'label', 'name', 'selected:b', 'show:b', 'tabsHideOnSubPages:b']),
-	'ion-tabs': new HTMLTagSpecification(localize('tags.ion.tabs', 'abs are a top level navigation component for created multiple stacked navs. The component is a container of individual Tab components.'),
+	'ion-tabs': new HTMLTagSpecification(localize('tags.ion4.tabs', 'abs are a top level navigation component for created multiple stacked navs. The component is a container of individual Tab components.'),
 		['color:color', 'name','scrollable:b', 'tabbarHidden:b', 'tabbarHighlight:b', 'tabbarLayout:tabbarLayout', 'tabbarPlacement:position', 'translucent:b', 'useRouter:b']),
-	'ion-text': new HTMLTagSpecification(localize('tags.ion.text', 'The text component is a simple component that can be used to style the text color of any element. The ion-text element should wrap the element in order to change the text color of that element.'),
+	'ion-text': new HTMLTagSpecification(localize('tags.ion4.text', 'The text component is a simple component that can be used to style the text color of any element. The ion-text element should wrap the element in order to change the text color of that element.'),
 		['color:color', 'mode:mode']),
-	'ion-textarea': new HTMLTagSpecification(localize('tags.ion.textarea', 'The textarea component is used for multi-line text input. A native textarea element is rendered inside of the component. The user experience and interactivity of the textarea component is improved by having control over the native textarea.'),
+	'ion-textarea': new HTMLTagSpecification(localize('tags.ion4.textarea', 'The textarea component is used for multi-line text input. A native textarea element is rendered inside of the component. The user experience and interactivity of the textarea component is improved by having control over the native textarea.'),
 		['autocapitalize', 'autocomplete:inputautocomplete', 'autofocus:b', 'clearOnEdit:b', 'color:color', 'cols', 'debounce', 'disabled:b', 'maxlength', 'minlength', 'mode:mode', 'name', 'placeholder', 'readonly:b', 'required:b', 'rows', 'spellcheck:b', 'value', 'wrap:wrap']),
-	'ion-thumbnail': new HTMLTagSpecification(localize('tags.ion.thumbnail', 'Thumbnails are square components that usually wrap an image or icon. They can be used to make it easier to display a group of larger images or provide a preview of the full-size image.'),
+	'ion-thumbnail': new HTMLTagSpecification(localize('tags.ion4.thumbnail', 'Thumbnails are square components that usually wrap an image or icon. They can be used to make it easier to display a group of larger images or provide a preview of the full-size image.'),
 		['slot"slot']),
-	'ion-title': new HTMLTagSpecification(localize('tags.ion.title', 'ion-title is a component that sets the title of the Toolbar.'),
+	'ion-title': new HTMLTagSpecification(localize('tags.ion4.title', 'ion-title is a component that sets the title of the Toolbar.'),
 		['color:color', 'mode:mode']),
-	'ion-toggle': new HTMLTagSpecification(localize('tags.ion.toggle', 'Toggles change the state of a single option. Toggles can be switched on or off by pressing or swiping them. '),
+	'ion-toggle': new HTMLTagSpecification(localize('tags.ion4.toggle', 'Toggles change the state of a single option. Toggles can be switched on or off by pressing or swiping them. '),
 		['checked:b', 'color:color', 'disabled:b', 'mode:mode', 'name', 'value']),
-	'ion-toolbar': new HTMLTagSpecification(localize('tags.ion.toolbar', 'Toolbars are positioned above or below content. When a toolbar is placed in an <ion-header> it will appear fixed at the top of the content, and when it is in an <ion-footer> it will appear fixed at the bottom. Fullscreen content will scroll behind a toolbar in a header or footer. When placed within an <ion-content>, toolbars will scroll with the content.'),
+	'ion-toolbar': new HTMLTagSpecification(localize('tags.ion4.toolbar', 'Toolbars are positioned above or below content. When a toolbar is placed in an <ion-header> it will appear fixed at the top of the content, and when it is in an <ion-footer> it will appear fixed at the bottom. Fullscreen content will scroll behind a toolbar in a header or footer. When placed within an <ion-content>, toolbars will scroll with the content.'),
 		['color:color', 'mode:mode']),
-	'ion-virtual-scroll': new HTMLTagSpecification(localize('tags.ion.virtual-scroll', 'Virtual Scroll displays a virtual, "infinite" list. An array of records is passed to the virtual scroll containing the data to create templates for. '),
+	'ion-virtual-scroll': new HTMLTagSpecification(localize('tags.ion4.virtual-scroll', 'Virtual Scroll displays a virtual, "infinite" list. An array of records is passed to the virtual scroll containing the data to create templates for. '),
 		['approxFooterHeight', 'approxHeaderHeight', 'approxItemHeight', 'footerFn', 'headerFn', 'itemHeight', 'items' ]),
 };
 
@@ -736,6 +892,57 @@ export function getIonicTagProvider(): IHTMLTagProvider {
 			}
 		},
 		collectValues: (tag: string, attribute: string, collector: (value: string) => void) => collectValuesDefault(tag, attribute, collector, IONIC_TAGS, globalAttributes, valueSets, customTags)
+	};
+}
+
+export function getIonic3TagProvider(): IHTMLTagProvider {
+	var customTags: { [tag: string]: string[] } = {
+		a: ['nav-direction:navdir', 'nav-transition:trans'],
+		button: ['ion-button:v', 'navPop:v', 'full:v', 'block:v', 'round:v', 'outline:v', 'icon-start:v', 'icon-end:v', 'large:v', 'small:v', 'color:clrs', 'clear:b', 'default:b', 'mode:mode', 'strong:b', 'ion-fab:v', 'menuClose:v', 'menuToggle:v']
+	};
+
+	var globalAttributes:any = [];
+
+	var valueSets: IValueSets = {
+		align: ['center', 'left', 'right'],
+		b: ['true', 'false'],
+		clrs: ['primary', 'secondary', 'danger', 'light', 'dark'],
+		fabside: ['top', 'bottom', 'right', 'left'],
+		inputtype: ['email', 'number', 'password', 'search', 'tel', 'text', 'url'],
+		rspinner: ['ios', 'ios-small', 'bubbles', 'circles', 'crescent', 'dots'],
+		listtype: ['card', 'list-inset'],
+		menusides: ['left', 'right'],
+		menutype: ['overlay', 'reveal', 'push'],
+		mode: ['ios', 'md'],
+		navdir: ['back', 'enter', 'exit', 'forward', 'swap'],
+		note: ['item-start', 'item-end'],
+		navsides: ['left', 'primary', 'right', 'secondary'],
+		paginationType: ['bullets', 'fraction', 'progress'],
+		scrolldir: ['x', 'xy', 'y'],
+		slideeffect: ['slide', 'fade', 'cube', 'coverflow', 'flip'],
+		slctinterface: ['action-sheet', 'popover', 'alert'],
+		tablayout: ['icon-top', 'icon-start', 'icon-end', 'icon-bottom', 'icon-hide', 'title-hide'],
+		tabplacement: ['top', 'bottom'],
+		trans: ['android', 'ios', 'none']
+	};
+
+	return {
+		getId: () => 'ionic3',
+		isApplicable: (languageId) => languageId === 'html',
+		collectTags: (collector: (tag: string, label: string) => void) => collectTagsDefault(collector, IONIC3_TAGS),
+		collectAttributes: (tag: string, collector: (attribute: string, type?: string) => void) => {
+			collectAttributesDefault(tag, collector, IONIC3_TAGS, globalAttributes);
+			if (tag) {
+				var attributes = customTags[tag];
+				if (attributes) {
+					attributes.forEach((a) => {
+						var segments = a.split(':');
+						collector(segments[0], segments[1]);
+					});
+				}
+			}
+		},
+		collectValues: (tag: string, attribute: string, collector: (value: string) => void) => collectValuesDefault(tag, attribute, collector, IONIC3_TAGS, globalAttributes, valueSets, customTags)
 	};
 }
 
